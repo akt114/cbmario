@@ -162,7 +162,7 @@ onload = function () {
             player.body.velocity.x = move_step;
             player.play('walkRight');
             if (player.x+steps >= platforms_array[pos]){
-                if( moves[pos] === 1 && onGround) {
+                if( moves[pos] === "1" && onGround) {
                     onGround = false;
                     player.body.velocity.y = -fly_step;
                     player.animations.stop();
@@ -250,6 +250,8 @@ onload = function () {
         else
             ans = '0 '+ans;
         temptext.innerText = temptext.innerText + '\n' + ans;
+        moves = ans.split(' ');
+        console.log(moves);
         player.body.enable = true;
     };
 
