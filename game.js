@@ -251,6 +251,7 @@ onload = function () {
             ans = '0 '+ans;
         temptext.innerText = temptext.innerText + '\n' + ans;
         moves = ans.split(' ');
+        pos = 0;
         console.log(moves);
         player.body.enable = true;
     };
